@@ -2,6 +2,14 @@ import Admin from "../models/admin.js";
 import User from "../models/user.js";
 import Product from "../models/product.js";
 import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const api = path.join(__dirname, "../api");
+
 
 
 export const postProduct = async (req, res) => {
@@ -139,3 +147,18 @@ export const deleteProduct = async (req, res) => {
             res.status(500).json({ message: "Internal Server Error", success: false, error: error });
     }
 }
+
+// fs.readFile(api+"/products.json", "utf-8", async (err, data)=>{
+//     if(err)
+//         return console.log(err);
+    
+//     const products = JSON.parse(data);
+//     await Promise.all(products.map(async (product) => {
+//         try {
+//             await Product.create(product);
+//         } catch (error) {
+//             console.log(error);
+//         }
+//     }));
+
+// });

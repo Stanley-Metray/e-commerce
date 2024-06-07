@@ -57,7 +57,7 @@ export const postLoginAdmin = async (req, res) => {
         const token = await generateToken({ id: Admin.id, email: Admin.email });
 
         let tokens = [];
-        if (Admin.tokens && Admin.tokens.length > 0) {
+        if (Admin.tokens && JSON.parse(Admin.tokens).length > 0) {
             tokens = JSON.parse(Admin.tokens);
         }
         tokens.push(token);

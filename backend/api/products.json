@@ -1,0 +1,338 @@
+[
+  {
+    "productName": "Apple iPhone 13",
+    "price": 79999,
+    "quantity": 10,
+    "description": "The latest iPhone with A15 Bionic chip. Enjoy a stunning display and incredible performance. Capture beautiful photos and videos with its advanced camera system.",
+    "imageUrl": "https://example.com/iphone13.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Samsung Galaxy S21",
+    "price": 69999,
+    "quantity": 15,
+    "description": "Flagship Samsung phone with Exynos 2100. Features a vibrant display and powerful performance. Perfect for capturing moments with its high-resolution camera.",
+    "imageUrl": "https://example.com/galaxyS21.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "OnePlus 9 Pro",
+    "price": 64999,
+    "quantity": 20,
+    "description": "High-end smartphone with Snapdragon 888. Experience smooth performance and quick charging. Capture stunning photos with the Hasselblad camera system.",
+    "imageUrl": "https://example.com/oneplus9pro.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Sony WH-1000XM4",
+    "price": 29999,
+    "quantity": 30,
+    "description": "Industry-leading noise-canceling headphones. Enjoy superior sound quality and all-day comfort. Perfect for immersive listening experiences.",
+    "imageUrl": "https://example.com/sonyWH1000XM4.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Dell XPS 13",
+    "price": 99999,
+    "quantity": 5,
+    "description": "Compact and powerful laptop with Intel i7 processor. Stunning display with minimal bezels. Perfect for professionals and creatives.",
+    "imageUrl": "https://example.com/dellXPS13.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Google Pixel 6",
+    "price": 59999,
+    "quantity": 12,
+    "description": "Google's latest smartphone with the new Tensor chip. Exceptional camera performance and clean Android experience. Perfect for tech enthusiasts and photographers.",
+    "imageUrl": "https://example.com/pixel6.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "HP Spectre x360",
+    "price": 119999,
+    "quantity": 8,
+    "description": "Convertible laptop with Intel i7 and 16GB RAM. Stunning 4K display and long battery life. Ideal for professionals and multimedia creators.",
+    "imageUrl": "https://example.com/hpspectrex360.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Bose QuietComfort 35 II",
+    "price": 24999,
+    "quantity": 25,
+    "description": "Wireless noise-canceling headphones. Excellent sound quality and comfortable fit. Perfect for travelers and music lovers.",
+    "imageUrl": "https://example.com/boseqc35ii.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Sony PlayStation 5",
+    "price": 49999,
+    "quantity": 7,
+    "description": "Next-gen gaming console with stunning graphics. Ultra-fast SSD and immersive gaming experience. Perfect for gamers.",
+    "imageUrl": "https://example.com/ps5.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Nintendo Switch",
+    "price": 29999,
+    "quantity": 20,
+    "description": "Hybrid gaming console for home and on-the-go. Wide variety of games and multiplayer options. Perfect for gamers of all ages.",
+    "imageUrl": "https://example.com/switch.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Apple MacBook Air",
+    "price": 92999,
+    "quantity": 10,
+    "description": "Lightweight laptop with M1 chip. Exceptional battery life and performance. Ideal for students and professionals.",
+    "imageUrl": "https://example.com/macbookair.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Microsoft Surface Pro 7",
+    "price": 84999,
+    "quantity": 15,
+    "description": "Versatile 2-in-1 laptop with Intel i5. High-resolution display and long battery life. Perfect for productivity and creativity.",
+    "imageUrl": "https://example.com/surfacepro7.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "JBL Flip 5",
+    "price": 8999,
+    "quantity": 50,
+    "description": "Portable Bluetooth speaker with powerful sound. Waterproof and durable design. Perfect for outdoor and indoor use.",
+    "imageUrl": "https://example.com/jblflip5.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Fitbit Charge 4",
+    "price": 12999,
+    "quantity": 30,
+    "description": "Advanced fitness tracker with built-in GPS. Heart rate monitoring and sleep tracking. Ideal for fitness enthusiasts.",
+    "imageUrl": "https://example.com/fitbitcharge4.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Canon EOS R5",
+    "price": 319999,
+    "quantity": 5,
+    "description": "Professional mirrorless camera with 45MP sensor. 8K video recording and advanced autofocus. Perfect for photographers and videographers.",
+    "imageUrl": "https://example.com/canoneosr5.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Nikon Z6 II",
+    "price": 209999,
+    "quantity": 8,
+    "description": "Full-frame mirrorless camera with 24.5MP sensor. 4K video recording and fast continuous shooting. Ideal for photographers and content creators.",
+    "imageUrl": "https://example.com/nikonz6ii.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "GoPro HERO9 Black",
+    "price": 39999,
+    "quantity": 15,
+    "description": "Action camera with 5K video recording. Waterproof and rugged design. Perfect for adventurers and vloggers.",
+    "imageUrl": "https://example.com/goprohero9.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "DJI Mavic Air 2",
+    "price": 79999,
+    "quantity": 10,
+    "description": "Compact drone with 4K video and 48MP photos. Long flight time and advanced features. Perfect for aerial photography and videography.",
+    "imageUrl": "https://example.com/djimavicair2.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Amazon Echo Dot",
+    "price": 4499,
+    "quantity": 40,
+    "description": "Smart speaker with Alexa voice assistant. Compact design and improved sound quality. Ideal for smart home control.",
+    "imageUrl": "https://example.com/echodot.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Roku Streaming Stick+",
+    "price": 5999,
+    "quantity": 25,
+    "description": "4K streaming device with HDR support. Easy to use and portable. Perfect for streaming movies and TV shows.",
+    "imageUrl": "https://example.com/rokustick.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Logitech MX Master 3",
+    "price": 7499,
+    "quantity": 20,
+    "description": "Advanced wireless mouse with ergonomic design. Customizable buttons and long battery life. Ideal for professionals and gamers.",
+    "imageUrl": "https://example.com/mxmaster3.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Razer DeathAdder V2",
+    "price": 5499,
+    "quantity": 30,
+    "description": "High-performance gaming mouse with precise sensor. Ergonomic design and customizable buttons. Perfect for gamers.",
+    "imageUrl": "https://example.com/deathadderv2.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Corsair K95 RGB Platinum",
+    "price": 12999,
+    "quantity": 15,
+    "description": "Mechanical gaming keyboard with customizable RGB lighting. Durable and responsive keys. Ideal for gamers and typists.",
+    "imageUrl": "https://example.com/k95rgb.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Asus ROG Strix G15",
+    "price": 89999,
+    "quantity": 10,
+    "description": "Gaming laptop with Intel i7 and RTX 2060. High-refresh-rate display and customizable RGB lighting. Perfect for gamers.",
+    "imageUrl": "https://example.com/rogstrixg15.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Lenovo Legion 5",
+    "price": 75999,
+    "quantity": 12,
+    "description": "Gaming laptop with AMD Ryzen 7 and GTX 1660 Ti. High-refresh-rate display and advanced cooling. Ideal for gamers and multitaskers.",
+    "imageUrl": "https://example.com/legion5.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "MSI GF65 Thin",
+    "price": 69999,
+    "quantity": 15,
+    "description": "Gaming laptop with Intel i5 and GTX 1660 Ti. Sleek design and powerful performance. Ideal for gamers on a budget.",
+    "imageUrl": "https://example.com/gf65thin.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "HP Omen 15",
+    "price": 104999,
+    "quantity": 8,
+    "description": "Gaming laptop with Intel i7 and RTX 2070. High-refresh-rate display and advanced cooling. Perfect for gamers and streamers.",
+    "imageUrl": "https://example.com/omen15.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Gigabyte Aorus 15G",
+    "price": 129999,
+    "quantity": 6,
+    "description": "Gaming laptop with Intel i7 and RTX 3080. Mechanical keyboard and high-refresh-rate display. Ideal for professional gamers.",
+    "imageUrl": "https://example.com/aorus15g.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Razer Blade 15",
+    "price": 159999,
+    "quantity": 5,
+    "description": "Premium gaming laptop with Intel i7 and RTX 3070. Sleek design and high-refresh-rate display. Perfect for gamers and creators.",
+    "imageUrl": "https://example.com/blade15.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Alienware m15 R6",
+    "price": 179999,
+    "quantity": 5,
+    "description": "High-performance gaming laptop with Intel i9 and RTX 3080. Advanced cooling and customizable RGB lighting. Perfect for serious gamers.",
+    "imageUrl": "https://example.com/m15r6.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Samsung Odyssey G9",
+    "price": 124999,
+    "quantity": 8,
+    "description": "Ultra-wide gaming monitor with 49-inch display. High refresh rate and HDR support. Ideal for immersive gaming experiences.",
+    "imageUrl": "https://example.com/odysseyg9.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "LG UltraGear 27GN950",
+    "price": 89999,
+    "quantity": 12,
+    "description": "4K gaming monitor with 144Hz refresh rate. Excellent color accuracy and fast response time. Perfect for gamers and content creators.",
+    "imageUrl": "https://example.com/ultragear27gn950.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Asus TUF Gaming VG27AQ",
+    "price": 49999,
+    "quantity": 20,
+    "description": "27-inch gaming monitor with 1440p resolution. High refresh rate and adaptive sync. Ideal for competitive gaming.",
+    "imageUrl": "https://example.com/vg27aq.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Acer Nitro XV272U",
+    "price": 34999,
+    "quantity": 18,
+    "description": "27-inch gaming monitor with 1440p resolution. High refresh rate and HDR support. Perfect for gamers.",
+    "imageUrl": "https://example.com/xv272u.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "BenQ Zowie XL2546K",
+    "price": 49999,
+    "quantity": 10,
+    "description": "24.5-inch esports gaming monitor with 240Hz refresh rate. Excellent motion clarity and customizable settings. Ideal for competitive gamers.",
+    "imageUrl": "https://example.com/zowiexl2546k.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Dell UltraSharp U2720Q",
+    "price": 79999,
+    "quantity": 10,
+    "description": "27-inch 4K monitor with excellent color accuracy. USB-C connectivity and ergonomic design. Perfect for professionals and creatives.",
+    "imageUrl": "https://example.com/u2720q.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "ViewSonic XG270QG",
+    "price": 59999,
+    "quantity": 15,
+    "description": "27-inch gaming monitor with 1440p resolution. High refresh rate and G-Sync support. Ideal for gamers.",
+    "imageUrl": "https://example.com/xg270qg.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Apple AirPods Pro",
+    "price": 24999,
+    "quantity": 25,
+    "description": "Wireless earbuds with active noise cancellation. Excellent sound quality and comfortable fit. Perfect for music lovers and professionals.",
+    "imageUrl": "https://example.com/airpodspro.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Samsung Galaxy Buds Pro",
+    "price": 15999,
+    "quantity": 30,
+    "description": "Wireless earbuds with active noise cancellation. Great sound quality and comfortable fit. Ideal for music lovers.",
+    "imageUrl": "https://example.com/galaxybudspro.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Sony WF-1000XM4",
+    "price": 27999,
+    "quantity": 20,
+    "description": "Wireless earbuds with industry-leading noise cancellation. Superior sound quality and long battery life. Perfect for audiophiles.",
+    "imageUrl": "https://example.com/wf1000xm4.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Jabra Elite 75t",
+    "price": 12999,
+    "quantity": 35,
+    "description": "Wireless earbuds with excellent sound quality and secure fit. Compact design and long battery life. Ideal for active lifestyles.",
+    "imageUrl": "https://example.com/elite75t.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  },
+  {
+    "productName": "Bose QuietComfort Earbuds",
+    "price": 29999,
+    "quantity": 15,
+    "description": "Wireless earbuds with noise cancellation. Superior sound quality and comfortable fit. Perfect for travel and daily use.",
+    "imageUrl": "https://example.com/quietcomfortearbuds.jpg",
+    "adminId": "3f2e907b-2335-4aba-ba18-2810c9fd08c6"
+  }
+]

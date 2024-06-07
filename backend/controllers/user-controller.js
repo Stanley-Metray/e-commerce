@@ -22,9 +22,7 @@ export const postRegister = async (req, res) => {
         const token = await generateToken({ id: createdUser.id, email: createdUser.email });
 
         let tokens = [];
-        if (createdUser.tokens && createdUser.tokens.length > 0) {
-            tokens = JSON.parse(createdUser.tokens);
-        }
+        
         tokens.push(token);
         createdUser.tokens = JSON.stringify(tokens);
         await createdUser.save();
@@ -94,9 +92,9 @@ export const postCart = async (req, res) => {
         if (product.quantity === 0 || product.quantity < req.body.quantity)
             return res.status(200).json({ success: false, message: "Failed to add item into cart" });
         else {
-            const cart = user.cart;
+            const cart = JSON.parse(user.cart);
             cart.push({ productId: req.body.productId, quantity: req.body.quantity });
-            const [affectedRows] = await User.update({ cart: cart }, { where: { id: req.body.userId } });
+            const [affectedRows] = await User.update({ cart: JSON.stringify(cart) }, { where: { id: req.body.userId } });
 
             if (affectedRows > 0) {
                 res.status(201).json({ success: true, message: "Item added to cart" });
@@ -123,7 +121,7 @@ export const getCartProducts = async (req, res) => {
             return;
         }
 
-        const products = await Promise.all(user.cart.map(async (cartItem) => {
+        const products = await Promise.all(JSON.parse(user.cart).map(async (cartItem) => {
             const product = await Product.findByPk(cartItem.productId, {
                 attributes: ["id", "productName", "price", "imageUrl"]
             });

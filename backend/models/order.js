@@ -17,9 +17,9 @@ const Order = sequelize.define('order', {
         }
     },
     items: {
-        type: DataTypes.JSON,
+        type: DataTypes.TEXT,
         allowNull: false,
-        defaultValue: []
+        defaultValue: "[]"
     },
     totalPrice : {
         type :DataTypes.DOUBLE,

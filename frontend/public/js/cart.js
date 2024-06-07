@@ -16,7 +16,7 @@ const setCartItems = (cart) => {
         cartItem.innerHTML = `
             <div class="card">
                 <div class="card-body">
-                    <a href="/product/${item.id}"><img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" alt="${item.productName}"></a>
+                    <a onclick="displayProduct('${item.id}')" style="cursor:pointer;"><img data-bs-toggle="modal" data-bs-target="#product-modal" src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" alt="${item.productName}"></a>
                     <div>
                         <h5 class="card-title">${item.productName}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Rs. ${item.price}</h6>
@@ -71,3 +71,24 @@ document.getElementById("place-order").addEventListener("click", async (e) => {
             alert("Something went wrong");
     }
 })
+
+
+async function displayProduct(productId) {
+    try {
+        const response = await axios.get(`/product/${productId}`);
+        const data = response.data;
+
+        if (data.success) {
+            const product = data.product;
+            document.getElementById('product-name').innerText = product.productName;
+            document.getElementById('product-price').innerText = '₹' + product.price.toFixed(2);
+            document.getElementById('product-quantity').innerText = 'Quantity: ' + (product.quantity || 1);
+            document.getElementById('product-description').innerText = product.description;
+            document.getElementById('product-image').src = "https://cdn-icons-png.flaticon.com/512/3081/3081840.png";
+        }
+
+    } catch (error) {
+        console.log(error);
+        alert("Something went wrong");
+    }
+}

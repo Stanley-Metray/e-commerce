@@ -23,12 +23,12 @@ const User = sequelize.define('user', {
         allowNull : false
     },
     cart : {
-        type : DataTypes.JSON,
-        defaultValue : []
+        type : DataTypes.TEXT,
+        defaultValue : "[]"
     },
     tokens : {
-        type : DataTypes.JSON,
-        defaultValue : []
+        type : DataTypes.TEXT,
+        defaultValue : "[]"
     }
 });
 

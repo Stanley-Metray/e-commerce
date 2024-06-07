@@ -15,6 +15,22 @@ nav
     width: 25%;
 }
 
+/* .card-title
+{
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+} */
+
+.description {
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100px;
+}
+
+
 @media screen and (max-width: 768px) {
     .form-container {
         width: 100%;

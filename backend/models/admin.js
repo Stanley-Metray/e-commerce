@@ -24,8 +24,8 @@ const Admin = sequelize.define('admin', {
         allowNull : false
     },
     tokens : {
-        type : DataTypes.JSON,
-        defaultValue : []
+        type : DataTypes.TEXT,
+        defaultValue : "[]"
     }
 });
 

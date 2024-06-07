@@ -14,13 +14,15 @@ const fetchProducts = async () => {
 }
 
 function createProductCard(product) {
+    const description = truncateDescription(product.description, 100);
+    const title = truncateTitle(product.productName, 20);
     return `
     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" style="max-height: 200px; object-fit: contain;" class="card-img-top img-fluid" alt="${product.productName}">
+                <a style="cursor:pointer;" onclick="displayProduct('${product.id}')"><img data-bs-toggle="modal" data-bs-target="#product-modal" src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" style="max-height: 200px; object-fit: contain;" class="card-img-top img-fluid" alt="${product.productName}"></a>
                 <div class="card-body">
-                    <h5 class="card-title">${product.productName}</h5>
-                    <p class="card-text">${product.description}</p>
+                    <h5 class="card-title">${title}</h5>
+                    <p class="card-text description">${description}</p>
                     <p class="card-text"><strong>Rs. ${product.price}</strong></p>
                     <div class="d-flex justify-content-around align-content-center">
                     <p class="btn btn-primary btn-sm" style="pointer-events: none; cursor: default;">
@@ -33,6 +35,22 @@ function createProductCard(product) {
         </div>
     `;
 }
+
+function truncateDescription(description, maxLength) {
+    if (description.length <= maxLength) {
+        return description;
+    }
+    return description.slice(0, maxLength).trim() + '...';
+}
+
+function truncateTitle(title, maxLength) {
+    if (title.length <= maxLength) {
+        return title;
+    }
+    return title.slice(0, maxLength).trim() + '...';
+}
+
+
 
 function displayProducts(products) {
     const productCardsContainer = document.getElementById('product-cards');
@@ -53,14 +71,14 @@ fetchProducts()
 
 const addToCart = async (productId) => {
     try {
-        const response = await axios.post("/user/cart", {productId : productId, quantity : 1}, {
-            headers : {
-                "Content-Type" : "application/json"
+        const response = await axios.post("/user/cart", { productId: productId, quantity: 1 }, {
+            headers: {
+                "Content-Type": "application/json"
             }
         });
 
         const data = await response.data;
-        if(data.success)
+        if (data.success)
             alert("Added To Cart");
         else
             alert(data.message);
@@ -70,3 +88,27 @@ const addToCart = async (productId) => {
         console.log(error);
     }
 }
+
+// modal for displaying product 
+
+
+async function displayProduct(productId) {
+    try {
+        const response = await axios.get(`/product/${productId}`);
+        const data = response.data;
+
+        if (data.success) {
+            const product = data.product;
+            document.getElementById('product-name').innerText = product.productName;
+            document.getElementById('product-price').innerText = '₹' + product.price.toFixed(2);
+            document.getElementById('product-quantity').innerText = 'Quantity: ' + (product.quantity || 1);
+            document.getElementById('product-description').innerText = product.description;
+            document.getElementById('product-image').src = "https://cdn-icons-png.flaticon.com/512/3081/3081840.png";
+        }
+
+    } catch (error) {
+        console.log(error);
+        alert("Something went wrong");
+    }
+}
+

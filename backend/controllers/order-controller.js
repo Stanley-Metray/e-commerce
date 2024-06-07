@@ -22,7 +22,7 @@ export const postOrder = async (req, res) => {
             return;
         }
 
-        const cart = user.cart;
+        const cart = JSON.parse(user.cart);
         if(cart.length<1)
         {
             res.status(404).json({ message: "Failed to place order", success: false, error: "404 error, No Items In Cart" });
@@ -50,8 +50,8 @@ export const postOrder = async (req, res) => {
 
         await Promise.all(productPromises);
 
-        const order = await Order.create({ items: cart, userId: req.body.userId, totalPrice:totalPrice});
-        user.cart = [];
+        const order = await Order.create({ items: JSON.stringify(cart), userId: req.body.userId, totalPrice:totalPrice});
+        user.cart = "[]";
         await user.save();
 
         res.status(201).json({ success: true, message: `Order placed, order id: ${order.id}` });
@@ -89,7 +89,7 @@ export const getOrders = async (req, res) => {
 
         // Fetch all products data for each order
         const ordersWithProductDetails = await Promise.all(orders.map(async (order) => {
-            const itemsWithDetails = await Promise.all(order.items.map(async (item) => {
+            const itemsWithDetails = await Promise.all(JSON.parse(order.items).map(async (item) => {
                 const product = await Product.findByPk(item.productId, { attributes: ["id", "productName", "price", "description", "imageUrl"] });
                 if (!product) {
                     throw new Error(`Product with ID ${item.productId} not found`);
