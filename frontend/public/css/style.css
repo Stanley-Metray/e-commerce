@@ -1,0 +1,22 @@
+nav
+{
+    position: sticky !important;
+    top: 0px;
+    z-index: 1000;
+}
+
+.link-hover:hover
+{
+    text-decoration: underline;
+}
+
+.form-container
+{
+    width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
+}
