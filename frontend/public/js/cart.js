@@ -9,21 +9,21 @@ const cartItemsContainer = document.getElementById('cart-items');
 
 const setCartItems = (cart) => {
     cart.forEach(item => {
-        const itemTotalPrice = item.quantity * item.price;
+        const itemTotalPrice = (item.quantity * item.price).toLocaleString('en-IN');
 
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
             <div class="card">
                 <div class="card-body">
-                    <a onclick="displayProduct('${item.id}')" style="cursor:pointer;"><img data-bs-toggle="modal" data-bs-target="#product-modal" src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" alt="${item.productName}"></a>
+                    <a onclick="displayProduct('${item.id}')" style="cursor:pointer;"><img style="object-fit: cover; object-position:center;" data-bs-toggle="modal" data-bs-target="#product-modal" src="${item.imageUrl}" alt="${item.productName}"></a>
                     <div>
                         <h5 class="card-title">${item.productName}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Rs. ${item.price}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Rs. ${item.price.toLocaleString('en-IN')}</h6>
                     </div>
                     <div>
                         <p class="card-text">Quantity: ${item.quantity}</p>
-                        <p class="card-text">Total Price: Rs. ${itemTotalPrice.toFixed(2)}</p>
+                        <p class="card-text">Total Price: Rs. ${itemTotalPrice}</p>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ getCart()
             else
                 document.getElementById("cart-items").innerHTML = `<h3 class="text-danger">Your Cart Is Empty</h3>`;
             document.getElementById('total-items').innerText = data.totalProducts;
-            document.getElementById('total-price').innerText = data.totalPrice;
+            document.getElementById('total-price').innerText = data.totalPrice.toLocaleString('en-IN');
         }
         else
             alert("Something went wrong");
@@ -81,10 +81,10 @@ async function displayProduct(productId) {
         if (data.success) {
             const product = data.product;
             document.getElementById('product-name').innerText = product.productName;
-            document.getElementById('product-price').innerText = '₹' + product.price.toFixed(2);
+            document.getElementById('product-price').innerText = 'Rs. ' + product.price.toLocaleString('en-IN');
             document.getElementById('product-quantity').innerText = 'Quantity: ' + (product.quantity || 1);
             document.getElementById('product-description').innerText = product.description;
-            document.getElementById('product-image').src = "https://cdn-icons-png.flaticon.com/512/3081/3081840.png";
+            document.getElementById('product-image').src = product.imageUrl;
         }
 
     } catch (error) {

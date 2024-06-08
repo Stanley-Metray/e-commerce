@@ -6,6 +6,7 @@ import sequelize from './connection/connect.js';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import favicon from 'serve-favicon';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -20,7 +21,9 @@ app.use(cors({
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use(favicon(path.join(__dirname, "../frontend/views", 'favicon.png')));
 
+console.log(path.join(__dirname, "../frontend", "/views", 'favicon.png'));
 // app.use();
 app.use('/css', express.static(path.join(__dirname, "../node_modules/bootstrap/dist/css")));
 app.use('/js', express.static(path.join(__dirname, "../node_modules/bootstrap/dist/js")));

@@ -19,11 +19,11 @@ function createProductCard(product) {
     return `
     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div class="card">
-                <a style="cursor:pointer;" onclick="displayProduct('${product.id}')"><img data-bs-toggle="modal" data-bs-target="#product-modal" src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" style="max-height: 200px; object-fit: contain;" class="card-img-top img-fluid" alt="${product.productName}"></a>
+                <a style="cursor:pointer;" onclick="displayProduct('${product.id}')"><img style="height:200px; width:100%; object-fit:contain; object-position:center;" data-bs-toggle="modal" data-bs-target="#product-modal" src="${product.imageUrl}" style="max-height: 200px; object-fit: contain;" class="card-img-top img-fluid" alt="${product.productName}"></a>
                 <div class="card-body">
                     <h5 class="card-title">${title}</h5>
                     <p class="card-text description">${description}</p>
-                    <p class="card-text"><strong>Rs. ${product.price}</strong></p>
+                    <p class="card-text"><strong>Rs. ${product.price.toLocaleString('en-IN')}</strong></p>
                     <div class="d-flex justify-content-around align-content-center">
                     <p class="btn btn-primary btn-sm" style="pointer-events: none; cursor: default;">
                     In Stock <span class="badge text-bg-danger">${product.quantity}</span>
@@ -100,10 +100,10 @@ async function displayProduct(productId) {
         if (data.success) {
             const product = data.product;
             document.getElementById('product-name').innerText = product.productName;
-            document.getElementById('product-price').innerText = '₹' + product.price.toFixed(2);
+            document.getElementById('product-price').innerText = 'Rs. ' + product.price.toLocaleString('en-IN');
             document.getElementById('product-quantity').innerText = 'Quantity: ' + (product.quantity || 1);
             document.getElementById('product-description').innerText = product.description;
-            document.getElementById('product-image').src = "https://cdn-icons-png.flaticon.com/512/3081/3081840.png";
+            document.getElementById('product-image').src = product.imageUrl;
         }
 
     } catch (error) {

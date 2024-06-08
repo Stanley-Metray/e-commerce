@@ -17,12 +17,12 @@ function displayOrders(data) {
                     ${order.items.map(item => `
                         <div class="row mb-3 border border-1">
                             <div class="col-md-2">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" class="img-fluid product-img" alt="${item.product.productName}">
+                                <img src="${item.product.imageUrl}" class="img-fluid product-img" alt="${item.product.productName}">
                             </div>
                             <div class="col-md-10">
                                 <h6>${item.product.productName}</h6>
                                 <p>${item.product.description}</p>
-                                <p>Rs. ${item.product.price}</p>
+                                <p>Rs. ${item.product.price.toLocaleString('en-IN')}</p>
                                 <p>Quantity: ${item.quantity}</p>
                             </div>
                         </div>
@@ -30,7 +30,7 @@ function displayOrders(data) {
                 </div>
                 <div>
                     <h5>Total:</h5>
-                    <h2>Rs. ${order.totalPrice}</h2>
+                    <h2>Rs. ${order.totalPrice.toLocaleString('en-IN')}</h2>
                 </div>
             `;
             ordersContainer.appendChild(orderDiv);
