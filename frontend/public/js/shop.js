@@ -3,6 +3,7 @@ const fetchProducts = async () => {
     try {
         const response = await axios.get('/products');
         const data = await response.data;
+        console.log(response);
         if (data.success)
             return data.product;
         else

@@ -7,7 +7,6 @@ const ProductRouter = Router();
 ProductRouter.post('/product', verifyToken, postProduct);
 ProductRouter.get('/product/:productId', verifyToken, getProduct);
 ProductRouter.get('/products', verifyToken, getProducts);
-ProductRouter.get('/products', verifyToken, getProducts);
 ProductRouter.put('/product', verifyToken, updateProduct);
 ProductRouter.delete('/product/:productId', verifyToken, deleteProduct);
 

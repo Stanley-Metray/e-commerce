@@ -62,7 +62,7 @@ export const getProduct = async (req, res) => {
 
 export const getProducts = async (req, res) => {
     try {
-
+        
         const user = await User.findByPk(req.body.userId) || await Admin.findByPk(req.body.userId);
 
         if (!user) {
@@ -70,7 +70,8 @@ export const getProducts = async (req, res) => {
             return;
         }
 
-        const products = await Product.findAll({ attributes: ["id", "productName", "imageUrl", "price", "quantity", "description"] });
+        const products = await Product.findAll({ attributes: ["id", "productName", "imageUrl", "price", "quantity", "description"] });     
+        
         if (products)
             res.status(200).json({ success: true, product: products });
         else
