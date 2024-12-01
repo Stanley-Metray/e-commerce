@@ -51,7 +51,6 @@ const getOrders = async()=>{
     } catch (error) {
         console.log(error);
         document.getElementById("msg-order").innerText = "No Orders To Display";
-        alert("Something went wrong");
     }
 }
 

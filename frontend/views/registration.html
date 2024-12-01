@@ -92,7 +92,9 @@
                 }
             } catch (error) {
                 console.log(error);
-                alert("Something went wrong");
+                if(error.response.data.message)
+                    alert(error.response.data.message);
+                
             }
         });
 
